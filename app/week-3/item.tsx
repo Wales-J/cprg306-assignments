@@ -5,11 +5,11 @@ type ItemProp={
 }
 export default function Item({name, quantity, category}:ItemProp) {
     return (
-        <div>
-            <ol>
-                <li>Name: {name}</li>
-                <li>Quantity: {quantity}</li>
-                <li>Category: {category}</li>
+        <div class="m-10 text-black font-serif">
+            <ol class="bg-purple-400 rounded-lg">
+                <li class="pl-3 pt-3">Name: {name}</li>
+                <li class="pl-3">Quantity: {quantity}</li>
+                <li class="pl-3 pb-3">Category: {category}</li>
             </ol>
         </div>
     )
