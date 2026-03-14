@@ -1,12 +1,14 @@
 'use client'
 import { useState } from 'react';
-import  Item  from "./item";
+import Item from './item';
 
-export default function ItemList({items}) {
+export default function ItemList({ items }) {
     const [sortBy, setSortBy] = useState('name');
+
+    const sortedItems = [...items];
     
     if(sortBy == 'name') {
-        items.sort((a, b) => {
+        sortedItems.sort((a, b) => {
         if(a.name < b.name){
             return -1;
         }
@@ -15,7 +17,7 @@ export default function ItemList({items}) {
         }
         return 0;});
     } else {
-        items.sort((a, b) => {
+        sortedItems.sort((a, b) => {
         if(a.category < b.category){
             return -1;
         }
@@ -25,7 +27,7 @@ export default function ItemList({items}) {
         return 0;});
     };
 
-    const itemList = items.map((item) => <li key={item.id}><Item name={item.name} quantity={item.quantity} category={item.category}/></li>);
+    const itemList = sortedItems.map((item) => <li key={item.id}><Item name={item.name} quantity={item.quantity} category={item.category}/></li>);
 
     return (
         <div>

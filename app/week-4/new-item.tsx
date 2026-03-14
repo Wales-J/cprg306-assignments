@@ -6,7 +6,7 @@ export default function NewItem() {
     const [quantity, setQuantity] = useState(1);
     const [category, setCategory] = useState("produce");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         var item1 = {name, quantity, category};
         console.log(item1);
@@ -22,13 +22,13 @@ export default function NewItem() {
         <div>
             <form onSubmit={handleSubmit} className="flex flex-col bg-purple-400 text-black">
                 <div className="m-3">
-                    <label>Name: </label><input type="text" value={name} onChange={(e) => {setName(e.target.value)}} class="bg-purple-300 rounded-lg"></input>
+                    <label>Name: </label><input type="text" value={name} onChange={(e) => {setName(e.target.value)}} className="bg-purple-300 rounded-lg"></input>
                 </div>
                 <div className="m-3">
-                    <label>Quantity: </label><input type="number" min={1} max={99} value={quantity} onChange={(e) => {setQuantity(e.target.valueAsNumber)}} class="bg-purple-300 rounded-lg"></input>
+                    <label>Quantity: </label><input type="number" min={1} max={99} value={quantity} onChange={(e) => {setQuantity(e.target.valueAsNumber)}} className="bg-purple-300 rounded-lg"></input>
                 </div>
                 <div className="m-3">
-                    <label>Category: </label><select value={category} onChange={(e) => {setCategory(e.target.value)}} class="bg-purple-300 rounded-lg">
+                    <label>Category: </label><select value={category} onChange={(e) => {setCategory(e.target.value)}} className="bg-purple-300 rounded-lg">
                         <option value="produce">Produce</option>
                         <option value="dairy">Dairy</option>
                         <option value="bakery">Bakery</option>
