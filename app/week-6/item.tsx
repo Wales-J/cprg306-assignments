@@ -1,4 +1,4 @@
-type ItemProp={
+export type ItemProp={
     name:string
     quantity:number
     category:string

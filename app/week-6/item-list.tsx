@@ -1,8 +1,12 @@
 'use client'
 import { useState } from 'react';
-import Item from './item';
+import Item, { type ItemProp } from './item';
 
-export default function ItemList({ items }) {
+type ItemListProps = {
+    items: ItemProp[];
+}
+
+export default function ItemList({ items }: ItemListProps) {
     const [sortBy, setSortBy] = useState('name');
 
     const sortedItems = [...items];
