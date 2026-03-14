@@ -1,4 +1,4 @@
-import  Item  from "./item.tsx";
+import  Item  from "./item";
 
 export default function ItemList() {
     const item1 = {

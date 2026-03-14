@@ -20,14 +20,14 @@ export default function NewItem() {
 
     return (
         <div>
-            <form onSubmit={handleSubmit} class="flex flex-col bg-purple-400 text-black">
-                <div class="m-3">
+            <form onSubmit={handleSubmit} className="flex flex-col bg-purple-400 text-black">
+                <div className="m-3">
                     <label>Name: </label><input type="text" value={name} onChange={(e) => {setName(e.target.value)}} class="bg-purple-300 rounded-lg"></input>
                 </div>
-                <div class="m-3">
+                <div className="m-3">
                     <label>Quantity: </label><input type="number" min={1} max={99} value={quantity} onChange={(e) => {setQuantity(e.target.valueAsNumber)}} class="bg-purple-300 rounded-lg"></input>
                 </div>
-                <div class="m-3">
+                <div className="m-3">
                     <label>Category: </label><select value={category} onChange={(e) => {setCategory(e.target.value)}} class="bg-purple-300 rounded-lg">
                         <option value="produce">Produce</option>
                         <option value="dairy">Dairy</option>
@@ -43,7 +43,7 @@ export default function NewItem() {
                     </select>
                 </div>
                 
-                <button type='submit' class="bg-purple-300 rounded-lg w-20 self-center mb-3">Submit</button>
+                <button type='submit' className="bg-purple-300 rounded-lg w-20 self-center mb-3">Submit</button>
             </form>
         </div>
     )

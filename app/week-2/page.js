@@ -1,4 +1,4 @@
-import { StudentInfo } from "./student-info.tsx";
+import { StudentInfo } from "./student-info";
 
 export default function Page() {
   return (
