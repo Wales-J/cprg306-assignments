@@ -2,8 +2,10 @@
 import { useState } from 'react';
 import Item, { type ItemProp } from './item';
 
+type ItemWithId = ItemProp & { id: string }
+
 type ItemListProps = {
-    items: ItemProp[];
+    items: ItemWithId[];
 }
 
 export default function ItemList({ items }: ItemListProps) {
