@@ -1,4 +1,4 @@
-import ItemList from "./item-list.tsx";
+import ItemList from "./item-list";
 
 export default function Page() {
   return (

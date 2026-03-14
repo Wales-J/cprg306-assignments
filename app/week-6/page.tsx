@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react';
-import ItemList from "./item-list.tsx";
-import NewItem from "./new-item.tsx"
+import ItemList from "./item-list";
+import  NewItem  from "./new-item"
 import itemsData from "./items.json";
 
 export default function Page() {
