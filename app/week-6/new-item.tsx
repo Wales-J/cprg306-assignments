@@ -2,7 +2,11 @@
 import {useState} from 'react';
 import Item from './item';
 
-export default function NewItem({onAddItem}) {
+type NewItemProps = {
+  onAddItem: (item: { name: string; quantity: number; category: string }) => void;
+};
+
+export default function NewItem({onAddItem}: NewItemProps) {
     const [name, setName] = useState("");
     const [quantity, setQuantity] = useState(1);
     const [category, setCategory] = useState("produce");

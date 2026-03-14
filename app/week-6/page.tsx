@@ -17,7 +17,7 @@ export default function Page() {
     return newId;
   }
 
-  const handleAddItem = (item) => {
+  const handleAddItem = (item: { name: any; quantity: any; category: any; }) => {
     var newItem = {
       id: generateNewId(),
       name: item.name,
